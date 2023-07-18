@@ -29,7 +29,12 @@ const Content_Nomad = () => {
         <h2>useClick</h2>
         <p>referen란 컴포넌트의 특정 부분을 선택할 수 있는 것</p>
         <p>useClick은 레퍼런스를 만들어주고 같은 레퍼런스를 return할 수 있게 한다.</p>
-        
+        <h2>useConfirm / prevenLeave</h2>
+        <p>useState와 Effect를 사용하지는 않으므로 hook은 아니다</p>
+        <p>사용자가 버튼을 클릭했을 때 이벤트를 수행하기 전 메시지를 보여주며 사용자의 반응을 확인하는 함수 </p>
+        <p> preventleave역시 저장하지 않고 나가겠습니까?라고 묻는 창 같이 사용자에게 메시지를 띄어주는 함수임</p>
+        <h2>useFadeIn</h2>
+        <p>하나의 요소를 지연시키거나 천천히 등장시키는 것, 물론 css로도 구현이 가능하다 animation을 hook에 포함시키는 거 </p>
     </div>
   );
 };

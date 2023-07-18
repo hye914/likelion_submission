@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGratipay } from '@fortawesome/free-brands-svg-icons';
+import { faShare} from '@fortawesome/free-solid-svg-icons';
+
 
 const Box = styled.div`
   width: 100vw;
@@ -7,7 +11,7 @@ const Box = styled.div`
   background-color: ${(props) => (props.darkMode ? 'black' : 'white')};
 `;
 
-const Bar = styled.div`
+const Space = styled.div`
   width: 10%;
   color: ${(props) => (props.darkMode ? 'white' : 'black')};
 `;
@@ -25,10 +29,43 @@ const Wrap = styled.div`
   color: ${(props) => (props.darkMode ? 'white' : 'black')};
 `;
 
+const Bar = styled.div`
+  width: 80px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  left: 40px;
+  top: 200px;
+  border-radius: 40px;
+  border: 2px solid ${(props) => (props.darkMode ? 'white' : 'black')};
+`;
+
+const Circle = styled.div`
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid ${(props) => (props.darkMode ? 'white' : 'black')};
+`;
+
+
 function Full({ image, title, username, content, date, darkMode }) {
   return (
     <Box darkMode={darkMode}>
-      <Bar darkMode={darkMode}></Bar> /*하트 bar만들기*/ㅎ
+      <Space darkMode={darkMode}>
+        <Bar>
+          
+          <FontAwesomeIcon icon={faGratipay} style={{fontSize: '50px'}} />
+          <Circle>
+          <FontAwesomeIcon icon={faShare} style={{fontSize: '30px'}}/>
+          </Circle>
+        </Bar>
+      </Space>
       <Container darkMode={darkMode}>
         <h1 style={{ marginLeft: '20px' }}>{title}</h1>
         <Wrap  darkMode={darkMode}>

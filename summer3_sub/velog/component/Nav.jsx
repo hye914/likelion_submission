@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon, faSearch} from '@fortawesome/free-solid-svg-icons';
+import { faVimeo } from '@fortawesome/free-brands-svg-icons';
 
 const Header = styled.div`
   width: 95vw;
@@ -52,11 +53,14 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-function Nav({ darkMode, handleDarkModeToggle }) {
+function Nav({ darkMode, handleDarkModeToggle, selectedCard }) {
   return (
     <>
       <Header darkMode={darkMode}>
-        <Name>Velog</Name>
+        <div style={{ display: 'flex' }}>
+        {selectedCard && <FontAwesomeIcon icon={faVimeo} style={{ fontSize: '50px' }} />}
+        <Name style={{ marginLeft: '20px' }}>{selectedCard ? selectedCard.username + ".log" : "Velog"}</Name>
+        </div>
         <Item>
           <Button darkMode={darkMode} onClick={handleDarkModeToggle}>
             <MoonIcon darkMode={darkMode} icon={darkMode ? faSun : faMoon} />

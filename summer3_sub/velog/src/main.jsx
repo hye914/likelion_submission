@@ -26,13 +26,13 @@ function App() {
     <div>
       {!selectedCard ? (
         <>
-          <Nav darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} />
+          <Nav darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} selectedCard={selectedCard} />
           <List darkMode={darkMode} handleCardClick={handleCardClick} />
           <Act darkMode={darkMode} handleCardClick={handleCardClick} />
         </>
       ) : (
         <>
-          <Nav darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} />
+          <Nav darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} selectedCard={selectedCard} />
           <Full
             darkMode={darkMode}
             title={selectedCard.title}
@@ -46,6 +46,7 @@ function App() {
       )}
     </div>
   );
+  
 }
 
 ReactDOM.render(
