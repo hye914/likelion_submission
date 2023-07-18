@@ -5,7 +5,7 @@ import { faChartLine, faClock, faSortDown } from "@fortawesome/free-solid-svg-ic
 import Preview from "./Preview"; 
 
 const Header = styled.div`
-  width: 90vw;
+  width: 95vw;
   height: 30px;
   background-color: ${(props) => (props.darkMode ? "black" : "white")};
   color: ${(props) => (props.darkMode ? "white" : "black")};

@@ -35,9 +35,11 @@ function App() {
           <Nav darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} />
           <Full
             darkMode={darkMode}
+            title={selectedCard.title}
             image={selectedCard.image}
             username={selectedCard.username}
             content={selectedCard.content}
+            date={selectedCard.date}
           />
           <button onClick={handleCloseClick}>Close</button>
         </>

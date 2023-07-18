@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Header = styled.div`
-  width: 90vw;
+  width: 95vw;
   height: 20px;
   background-color: ${(props) => (props.darkMode ? 'black' : 'white')};
   color: ${(props) => (props.darkMode ? 'white' : 'black')};
