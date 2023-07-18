@@ -8,6 +8,7 @@ import Full from '../component/Full';
 
 function App() {
   const [selectedCard, setSelectedCard] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleCardClick = (card) => {
     setSelectedCard(card);
@@ -17,17 +18,21 @@ function App() {
     setSelectedCard(null);
   };
 
+  const handleDarkModeToggle = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div>
       {!selectedCard ? (
         <>
-          <Nav />
-          <List handleCardClick={handleCardClick} />
+          <Nav darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} />
+          <List darkMode={darkMode} handleCardClick={handleCardClick} />
           <Act handleCardClick={handleCardClick} />
         </>
       ) : (
         <>
-          <Nav />
+          <Nav darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} />
           <Full
             image={selectedCard.image}
             username={selectedCard.username}
@@ -46,3 +51,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+export default App;

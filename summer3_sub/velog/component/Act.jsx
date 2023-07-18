@@ -44,5 +44,3 @@ function Act({ handleCardClick }) {
 }
 
 export default Act;
-
-
