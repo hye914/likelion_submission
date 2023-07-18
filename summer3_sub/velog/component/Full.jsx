@@ -36,7 +36,7 @@ function Full({ image, title, username, content, date, darkMode }) {
           <h3>{date}</h3>
         </Wrap>
         <img src={image} alt="Card Image" style={{ padding: '30px', width: '800px', height: '400px' }} />
-        <p style={{ padding: '30px', width: '600px' }}>{content}</p>
+        <p style={{ padding: '30px', width: '700px' }}>{content}</p>
       </Container>
     </Box>
   );
