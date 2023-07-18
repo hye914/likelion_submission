@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  height: 500px;
-  width: 400px;
+  padding:50px;
+  height: 600px;
+  width: 900px;
   background-color: ${(props) => (props.darkMode ? 'black' : 'white')};
 `;
 
 const Card = styled.div`
-  border: 1px solid black;
+  border: 1px solid ${(props) => (props.darkMode ? 'white' : 'black')};
   padding: 16px;
   margin: 16px;
   background-color: ${(props) => (props.darkMode ? 'black' : 'white')};
@@ -17,11 +18,11 @@ const Card = styled.div`
 
 const Image = styled.img`
   height: 300px;
-  width: 330px;
+  width: 390px;
 `;
 
 const Text = styled.div`
-  width: 300px;
+  width: 350px;
   height: 100px;
   overflow: hidden;
   color: ${(props) => (props.darkMode ? 'white' : 'black')};

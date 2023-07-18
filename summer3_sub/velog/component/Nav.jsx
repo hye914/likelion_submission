@@ -5,7 +5,7 @@ import { faSun, faMoon, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Header = styled.div`
   width: 90vw;
-  height: 100px;
+  height: 20px;
   background-color: ${(props) => (props.darkMode ? 'black' : 'white')};
   color: ${(props) => (props.darkMode ? 'white' : 'black')};
   display: flex;

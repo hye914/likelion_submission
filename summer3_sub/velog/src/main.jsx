@@ -28,12 +28,13 @@ function App() {
         <>
           <Nav darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} />
           <List darkMode={darkMode} handleCardClick={handleCardClick} />
-          <Act handleCardClick={handleCardClick} />
+          <Act darkMode={darkMode} handleCardClick={handleCardClick} />
         </>
       ) : (
         <>
           <Nav darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} />
           <Full
+            darkMode={darkMode}
             image={selectedCard.image}
             username={selectedCard.username}
             content={selectedCard.content}
@@ -51,5 +52,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-export default App;
