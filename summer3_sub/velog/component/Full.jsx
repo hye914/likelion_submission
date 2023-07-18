@@ -28,7 +28,7 @@ const Wrap = styled.div`
 function Full({ image, title, username, content, date, darkMode }) {
   return (
     <Box darkMode={darkMode}>
-      <Bar darkMode={darkMode}></Bar> /*하트 bar만들기*/
+      <Bar darkMode={darkMode}></Bar> /*하트 bar만들기*/ㅎ
       <Container darkMode={darkMode}>
         <h1 style={{ marginLeft: '20px' }}>{title}</h1>
         <Wrap  darkMode={darkMode}>
